@@ -151,7 +151,7 @@ module.exports = function(grunt) {
 					'<%= config.app %>/js/TweenLite.js'
 					'<%= config.app %>/js/TweenMax.js'					
                 ],
-                dest:[
+                dest:
 					'<%= config.dist %>/js/common.js'
 					'<%= config.dist %>/js/jquery.gsap.js'
 					'<%= config.dist %>/js/jquery.mCustomScrollbar.concat.min.js'
@@ -159,7 +159,7 @@ module.exports = function(grunt) {
 					'<%= config.dist %>/js/TimelineLite.js'
 					'<%= config.dist %>/js/TweenLite.js'
 					'<%= config.dist %>/js/TweenMax.js'	
-					]
+					
             }
         },
 
