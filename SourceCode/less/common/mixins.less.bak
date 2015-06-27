@@ -1,0 +1,102 @@
+//BORDER기본 @border-base-color는 variabes에서 설정할것
+#BORDERCOMMON{
+	.TOP{
+		border-top:1px solid @border-base-color;
+	}
+
+	.BOTTOM{
+		border-bottom:1px solid @border-base-color;
+	}
+
+	.RIGHT{
+		border-right:1px solid @border-base-color;
+	}
+
+	.LEFT{
+		border-left:1px solid @border-base-color;
+	}
+
+	.ALL{
+		border:1px solid @border-base-color;
+	}
+}//END
+
+
+  
+//BORDER 커스터마이징 굵기,컬러 인자값
+#BORDERCUSTOM{
+	.TB(@borderWidth,@color){
+		border-top:@borderWidth solid @color;
+		border-bottom:@borderWidth solid @color;
+	}
+	.LR(@borderWidth,@color){
+		border-left:@borderWidth solid @color;
+		border-right:@borderWidth solid @color;
+	}
+	.TOP(@borderWidth,@color){
+		border-top:@borderWidth solid @color;
+	}
+	.BOTTOM(@borderWidth,@color){
+		border-bottom:@borderWidth solid @color;
+	}
+	.LEFT(@borderWidth,@color){
+		border-left:@borderWidth solid @color;
+	}
+	.RIGHT(@borderWidth,@color){
+		border-right:@borderWidth solid @color;
+	}
+}//END
+
+
+.ellipsis(@widthSelect){text-overflow:ellipsis; white-space:nowrap; overflow:hidden; width:@widthSelect;}
+ 
+
+
+ //padding설정
+
+ #PADDING{
+	.2(@top-bottom:0, @lett-right:0){ 
+		padding:@arguments; 
+	}
+
+	 .3(@top:0, @lett-right:0, @bottom:0){ 
+		padding:@arguments; 
+	}
+ 
+	 .4(@top:0, @right:0, @bottom:0, @left:0){ 
+		padding:@arguments; 
+	}
+}//END
+
+
+//margin설정
+ #MARGIN{
+	.2(@top-bottom:0, @lett-right:0){ 
+		margin:@arguments; 
+	}
+
+	 .3(@top:0, @lett-right:0, @bottom:0){ 
+		margin:@arguments; 
+	}
+
+	 .4(@top:0, @right:0, @bottom:0, @left:0){ 
+		margin:@arguments; 
+	}
+}//END
+
+
+
+ //BOX-SHADOW
+	.box-shadow (@x: 0, @y: 0, @blur: 1px, @color: #000) {
+		box-shadow:@arguments; 
+	}
+
+
+
+
+
+ 
+// mixins.less
+ 
+
+   

@@ -1,0 +1,108 @@
+// style.less
+// ------------------------------------
+
+
+// bootstrap variables and mixins
+@import "../../bower_components/bootstrap/less/mixins.less";
+@import "../../bower_components/bootstrap/less/variables.less";
+
+
+
+// variables and mixins
+@import "common/mixins.less";
+@import "common/variabes.less";
+
+
+// webfont
+// @import url(common/nanumgothic.less);
+
+
+// global
+@import "common/common.less";
+
+
+// plugins
+// @import "plugins/plugins.less";
+
+
+// ul
+@import "ui/tab.less";
+@import "ui/table.less";
+@import "ui/button.less";
+
+
+// layouts
+@import "layout/header.less";
+@import "layout/contents.less";
+@import "layout/lnb.less";
+@import "layout/footer.less"; 
+
+
+// publisher, 공동으로 작업할때를 대비
+@import "custom/publisher1.less";
+// @import "custom/publisher2.less";
+
+
+// responsive
+// @import "custom/responsive.less";
+
+ 
+.aboutWrap,
+.propertyWrap{padding:150px 0 90px;}
+
+.propertyWrap{background:url('/images/propertyBg.png') repeat;}
+
+
+.aboutWrap ul,
+.propertyWrap ul{padding:60px 0 0;}
+
+.aboutWrap h2,
+.propertyWrap h2{text-align:center;}
+
+
+.about01,
+.about02{width:50%;}
+.about01{text-align:left;}
+.about02{text-align:right; display:none;}
+.about01 img,
+.about02 img{width:84%;}    
+.about02.active{display:none;}
+
+.property{width:33.3%; text-align:center; margin-bottom:30px;}
+.property img{width:70%;}
+
+.property p{
+.textHide;
+background:url('/images/lightIcon.png') no-repeat center -66px;
+height:89px;
+margin-bottom:-30px;
+}
+
+
+.organizition{background:url('/images/ogaBg.png') no-repeat; position:relative;}
+.organizition > ul{position:absolute; top:50%; left:50%;}
+.organizition > ul > li > p{position:absolute; top:300px; left:30px;}
+
+.organizition > ul > li > ul > li:nth-child(0){position:absolute; top:200px; left:130px;}
+.organizition > ul > li > ul > li:nth-child(1){position:absolute; top:100px; left:30px;}
+
+
+@media screen and (max-width: 600px) {		
+	.about01,
+	.about02{width:100%; text-align:center; padding:5% 0; top:0;}
+	.property{width:100%;}
+}
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+	.aboutWrap{padding:75px 0 45px;}
+	.aboutWrap ul{padding:30px 0 0;}
+	.about01,
+	.about02{width:100%; text-align:center; padding:5% 0; height:auto;}
+	.about01 img,
+	.about02 img{width:60%;} 
+	.property{width:50%;}
+	.property p{height:151px; background-position:center 0; margin-bottom:30px;}
+	
+}
+@media screen and (min-width: 1001px) {
+	
+}

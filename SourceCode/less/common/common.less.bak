@@ -1,0 +1,127 @@
+/* 
+---------------------------------------------------------------
+*
+* common.less
+*
+* 사이트의 기본이 되는 글로벌 스타일
+*
+---------------------------------------------------------------
+*/
+
+/*모바일 셀렉트
+select{
+background:#f9f9fa url('imgs/selectBg.gif') no-repeat 98% 50%;
+-webkit-appearance:none;
+border-radius:0;
+-webkit-border-radius:0em;
+background-size:13px 13px;
+font-size:0.6em;
+}
+*/
+
+/*체크박스*/
+input[type=radio]{
+vertical-align: middle;
+position: relative;
+bottom: -2px;
+vertical-align:-2px;
+}
+
+
+/*reset*/
+body,div,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,a,button,select,img,a,input,label{margin:0;padding:0;}
+ul,ol,dl {list-style:none; }
+img,fieldset,iframe{border:0}
+legend{display:none;}
+img {border:0; vertical-align:middle; font-size:0; line-height:0; position:relative;}
+em,address{font-style:normal}
+input,select,button{vertical-align:middle}
+a{text-decoration:none; border:0}
+table{border-spacing:0; border-collapse:collapse;}
+table caption{display:none;}
+button { border:0; padding:0; background:transparent; cursor:pointer; *overflow:visible; }
+button::-moz-focus-inner{border:0; padding: 0;}
+body{overflow:hidden; overflow-y:auto; overflow-x:auto;}
+body, html {width:100%; height:100%;}
+
+
+/*
+p.lineStyle{line-height:19px !important;}
+p.lineStyleLow{line-height:18px !important;}
+*/
+
+
+/*공통 css*/
+h1,h2,h3,h4,h5,h6{font-weight:600;}
+strong{font-weight:600;}
+button{font-family:'Nanum Gothic','나눔고딕'; font-weight:600;}
+#wrap{font-family:'Nanum Gothic','나눔고딕'; font-weight:600; font-size:12px;}
+#wrap:after,
+#header:after,
+#contents:after,
+#footer:after,
+.margin0Auto:after,
+.floatClear:after{display:block; content:''; clear:both;}
+
+.margin0Auto{margin:0 auto;}
+.inner{width:960px;}
+
+
+#contents{clear:both;}
+#footer{clear:both;}
+
+
+
+/*박스 공통 css*/
+.boxR{clear:both; float:left; width:100%; text-align:right;}
+.boxL{clear:both; float:left; width:100%; text-align:left;}
+.boxC{clear:both; float:left; width:100%; text-align:center;}
+.boxPlex{clear:both; float:left; width:100%;}
+.boxPlex>.left{float:left;}
+.boxPlex>.right{float:right;}
+.boxPlex>ul li{float:left;}
+
+
+.boxCBlock{clear:both; float:left; width:100%; text-align:center;}
+.boxCBlock>ul,
+.boxCBlock>ol,
+.boxCBlock>div,
+.boxCBlock>dl{display:inline-block;}
+
+/*마진 패딩클리어*/
+/*
+ma = 마진
+pa = 패딩 
+
+_l = 왼쪽
+_r = 오른쪽
+_t = 위쪽
+_b = 아래쪽
+
+*/
+.ma_l_n{margin-left:0 !important;}
+.ma_r_n{margin-right:0 !important;}
+.ma_t_n{margin-top:0 !important;}
+.ma_b_n{margin-bottom:0 !important;}
+.pa_l_n{padding-left:0 !important;}
+.pa_r_n{padding-right:0 !important;}
+.pa_t_n{padding-top:0 !important;}
+.pa_b_n{padding-bottom:0 !important;}
+
+
+/*inner박스*/
+.boxSizing{
+box-sizing:border-box;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+}
+
+.none{display:none;}
+.test{display:block !important;}
+.rel{position:relative;}
+.resetPosition{position:static;} 
+
+   
+
+
+  

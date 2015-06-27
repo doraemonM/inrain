@@ -1,0 +1,85 @@
+#header{
+	padding:30px 10%; 
+	border-bottom:1px solid #ccc;
+}
+#header > h1{float:left;}
+#gnb{float:right;}
+#gnb li{float:left; margin-left:45px;}
+#gnb li:first-child{margin-left:0;}
+#gnb li a{	
+	 display:block;
+	 width:73px; 
+	 height:30px;
+	 background:url('/images/gnb01_off.png') no-repeat;
+ }
+
+  #gnb li.gnb02 a{
+	width:84px;
+	 background:url('/images/gnb02_off.png') no-repeat;
+}
+
+  #gnb li.gnb03 a{
+	width:73px;
+	 background:url('/images/gnb03_off.png') no-repeat;
+}
+  #gnb li.gnb04 a{
+	width:84px;
+	 background:url('/images/gnb04_off.png') no-repeat;
+}
+  #gnb li.gnb05 a{
+	width:89px;
+	 background:url('/images/gnb05_off.png') no-repeat;
+}
+
+#gnb li.gnb01.on a,
+#gnb li.gnb01:hover a{background:url('/images/gnb01_on.png') no-repeat;}
+
+#gnb li.gnb02.on a,
+#gnb li.gnb02:hover a{background:url('/images/gnb02_on.png') no-repeat;}
+
+#gnb li.gnb03.on a,
+#gnb li.gnb03:hover a{background:url('/images/gnb03_on.png') no-repeat;}
+
+#gnb li.gnb04.on a,
+#gnb li.gnb04:hover a{background:url('/images/gnb04_on.png') no-repeat;}
+
+#gnb li.gnb05.on a,
+#gnb li.gnb05:hover a{background:url('/images/gnb05_on.png') no-repeat;}
+
+
+
+  @media screen and (max-width: 600px) {	
+	#header > h1{float:none; text-align:center;}
+	#gnb{clear:both; float:none; text-align:center;}
+	#gnb li{float:none; text-align:center; margin-left:0;}
+	#gnb li a{background:none !important; width:auto !important; height:auto !important;}
+    }
+    @media screen and (min-width: 600px) and (max-width: 1000px) {
+	#header{padding:0 0 30px;}
+	#header > h1{float:none; text-align:center; padding:30px 0;}
+	#gnb{clear:both; float:none; text-align:center;}
+	#gnb ul{display:inline-block;}		
+	#gnb li a{.textHide;}
+    }
+    @media screen and (min-width: 1001px) {
+	#gnb li a{.textHide;}
+    }
+
+
+
+  @media screen and (max-width: 600px) {	
+	#header > h1{float:none; text-align:center;}
+	#gnb{clear:both; float:none; text-align:center;}
+	#gnb li{float:none; text-align:center; margin-left:0;}
+	#gnb li a{background:none !important; width:auto !important; height:auto !important;}
+    }
+    @media screen and (min-width: 600px) and (max-width: 1000px) {
+	#header{padding:0 0 30px;}
+	#header > h1{float:none; text-align:center; padding:30px 0;}
+	#gnb{clear:both; float:none; text-align:center;}
+	#gnb ul{display:inline-block;}		
+	#gnb li a{.textHide;}
+    }
+    @media screen and (min-width: 1001px) {
+	#gnb li a{.textHide;}
+    }

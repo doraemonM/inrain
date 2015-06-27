@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+
+include "head.html"
+
+
+<title>title</title>
+</head>
+<body>
+include "header.html"
+<div id="contents">
+	<div class="aboutWrap">
+		<div class="margin0Auto">
+			<h2><img src="/images/about.png" alt="about" /></h2>
+			<ul class="aboutMaso">
+				<li class="masoAbout about01"><img src="/images/aboutQ.png" alt="세상의 모든 서비스를 인터넷에 담아낼 수 있을까?" /></li>
+				<li class="masoAbout about02"><img src="/images/aboutA.png" alt="누구에게나 쉽고 편리하게 무언가를 제공할수 있도록 인레인은 앞장섭니다." /></li>
+			</ul>
+		</div>
+	</div>
+	<div class="propertyWrap">
+		<div class="margin0Auto">
+			<h2><img src="/images/property.png" alt="property right" /></h2>
+			<ul class="aboutMaso">
+				<li class="masoAbout property property01">
+					<p>전등이미지</p>
+					<img src="/images/property01.png" alt="" />
+				</li>
+				<li class="masoAbout property property02">
+					<p>전등이미지</p>
+					<img src="/images/property01.png" alt="" />
+				</li>
+				<li class="masoAbout property property03">
+					<p>전등이미지</p>
+					<img src="/images/property01.png" alt="" />
+				</li>
+				<li class="masoAbout property property04">
+					<p>전등이미지</p>
+					<img src="/images/property01.png" alt="" />
+				</li>
+				<li class="masoAbout property property05">
+					<p>전등이미지</p>
+					<img src="/images/property01.png" alt="" />
+				</li>
+				<li class="masoAbout property property06">
+					<p>전등이미지</p>
+					<img src="/images/property01.png" alt="" />
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="organizationWrap" id="orgaTop">
+		<div class="margin0Auto">
+			<h2><img src="/images/about.png" alt="about" /></h2>
+			<div class="organizition">
+				<div id="timelinelite"></div>
+				<ul>
+					<li>
+						<p class="ceo"><img src="/images/ceo.png" alt="" /></p>
+						<ul>
+							<li><img src="/images/oga02.png" alt="" /></li>
+							<li><img src="/images/oga03.png" alt="" /></li>
+							<li><img src="/images/oga04.png" alt="" /></li>
+							<li><img src="/images/oga05.png" alt="" /></li>
+							<li><img src="/images/oga06.png" alt="" /></li>
+							<li><img src="/images/oga07.png" alt="" /></li>
+							<li><img src="/images/oga08.png" alt="" /></li>
+						</ul>			
+					</li>			
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</div> <!-- /container -->
+
+
+include "js.html"
+<script type="text/javascript">
+$(document).ready(function(){
+	var $container = $('.aboutMaso');		
+	$container.masonry({			
+	  itemSelector: '.masoAbout'
+	});			
+	
+	
+
+	$(window).resize(function(){
+		var thisW = $(this).width();
+		if(thisW <= 600){		
+			$('.aboutMaso > li').addClass('active');			
+			$('.aboutMore').removeClass('aboutMore');
+			$('.about02.active').hide();
+			$('.about01.active').on('click',function(e){		
+				e.preventDefault();
+				var abH = $('.about01.active').height();				
+				TweenMax.staggerTo($('.about01.active'), 1, 
+					  {scale:0, opacity:0}, 0.25,function(){		
+						$('.aboutMaso').css({top:-abH});
+						$('.about02.active').fadeIn(500);
+						
+				});				
+				
+			});
+		}else if(thisW >= 601){
+					$('.aboutMaso > li').removeClass('active');				
+					$('.about02').addClass('aboutMore');				
+					$('.aboutMore').show();
+					var abH = $('.about01').height();
+					TweenMax.staggerTo($('.about01'), 0.3, 
+					  {scale:1, opacity:1}, 0.25,function(){		
+						$('.aboutMaso').css({top:'0'});
+						
+				});				
+			
+		}
+
+
+		
+
+	});
+	
+
+	$(window).scroll(function(){
+		var scrollTop = $(document).scrollTop();	
+		var kk = $('#orgaTop').offset().top;	
+		var  timelineLite = $("#timelinelite"),
+        tagline = $(".organizition li"),      
+        tl = new TimelineLite();
+      
+			if(scrollTop >= kk){
+				       
+			 tl.from(timelinelite, 0.5, {width:"0px", alpha:0}, "-=0.02")
+			 .staggerFrom(tagline, 0.5, {top:"-=30px", rotation:"-40deg", alpha:0, scale:3.8, ease:Back.easeOut,color:'red'}, 0.2);
+			}else{
+				tl.reverse();
+			}		
+	});
+
+		$(window).load(function(){			
+			$(window).trigger('resize');
+		});
+	
+	
+});
+</script>
+
+</body>
+</html>
