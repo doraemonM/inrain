@@ -300,11 +300,44 @@ module.exports = function(grunt) {
                     //     dest: '<%= config.dist %>/fonts/'
                     // },
                     // jquery
+					/*
                     {
                         nonull: true,
                         src: '<%= config.bower %>/jquery/jquery.min.js',
                         dest: '<%= config.dist %>/js/lib/jquery.min.js'
                     },
+					{
+                        nonull: true,
+                        src: '<%= config.app %>/js/jquery.gsap.js',
+                        dest: '<%= config.app %>/js/jquery.gsap.js'
+                    },
+					{
+                        nonull: true,
+                        src: '<%= config.app %>/js/jquery.mCustomScrollbar.concat.min.js',
+                        dest: '<%= config.app %>/js/jquery.mCustomScrollbar.concat.min.js'
+                    },
+					{
+                        nonull: true,
+                        src: '<%= config.app %>/js/masonry.pkgd.min.js',
+                        dest: '<%= config.app %>/js/masonry.pkgd.min.js'
+                    },
+					{
+                        nonull: true,
+                        src: '<%= config.app %>/js/TimelineLite.js',
+                        dest: '<%= config.app %>/js/TimelineLite.js'
+                    },
+					{
+                        nonull: true,
+                        src: '<%= config.app %>/js/TweenLite.js',
+                        dest: '<%= config.app %>/js/TweenLite.js'
+                    },
+					{
+                        nonull: true,
+                        src: '<%= config.app %>/js/TweenMax.js',
+                        dest: '<%= config.app %>/js/TweenMax.js'
+                    },
+					*/
+
                     // // jquery ui
                     // {
                     //     nonull: true,
