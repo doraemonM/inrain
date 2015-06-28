@@ -143,13 +143,16 @@ module.exports = function(grunt) {
                     // banner: '<%= banner %>'
                 },
                 src: [
-                    '<%= config.app %>/js/common.js',
-					'<%= config.app %>/js/jquery.gsap.js',
+                    '<%= config.app %>/js/common.js',					
 					'<%= config.app %>/js/jquery.mCustomScrollbar.concat.min.js',
 					'<%= config.app %>/js/masonry.pkgd.min.js',
+					'<%= config.app %>/js/plugins/CSSPlugin.js',
+					'<%= config.app %>/js/plugins/EasePack.js',	
+					'<%= config.app %>/js/TweenMax.js',  
+					'<%= config.app %>/js/jquery.gsap.js',
 					'<%= config.app %>/js/TimelineLite.js',
-					'<%= config.app %>/js/TweenLite.js',
-					'<%= config.app %>/js/TweenMax.js'                    				
+					'<%= config.app %>/js/TweenLite.js'
+									                  				
                 ],
                 dest:
 					'<%= config.dist %>/js/common.js'
